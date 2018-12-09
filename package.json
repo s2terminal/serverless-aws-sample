@@ -1,0 +1,19 @@
+{
+  "name": "serverless-aws-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.15",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.1",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.1"
+  }
+}
