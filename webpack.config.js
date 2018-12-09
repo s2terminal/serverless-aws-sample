@@ -16,6 +16,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts']
   },
+  externals: ['aws-sdk'],
   output: {
     libraryTarget: 'commonjs',
     path: path.resolve(__dirname, '.webpack'),

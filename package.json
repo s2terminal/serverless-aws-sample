@@ -11,9 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.15",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^10.12.12",
     "serverless-webpack": "^5.2.0",
     "ts-loader": "^5.3.1",
     "typescript": "^3.1.6",
     "webpack": "^4.26.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.373.0"
   }
 }

@@ -2,8 +2,28 @@ service: serverless-aws-sample
 provider:
   name: aws
   runtime: nodejs8.10
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Resource: "arn:aws:s3:::*"
+      Action:
+        - "s3:*"
+    - Effect: "Allow"
+      Resource: "*"
+      Action:
+        - "rekognition:*"
 plugins:
   - serverless-webpack
 functions:
   hello:
     handler: src/index.hello
+    events:
+      - s3:
+          bucket: awstags-input-images
+          event: s3:ObjectCreated:*
+resources:
+  Resources:
+    NewResource:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: awstags-output-tags
